@@ -1104,6 +1104,18 @@ footer{
 }
 
 /* =============== MEDIA QUARRY =============== */
+@media (max-width: 720px){
+.wrapperaboutme {
+    height: 65vh;
+}
+@media (max-width: 570px){
+.wrapperaboutme {
+    height: 70vh;
+}
+  @media (max-width: 375px){
+.wrapperaboutme {
+    height: 142vh;
+}
 
 @media (max-width:1220px){
     .toggle-button{
@@ -1122,7 +1134,6 @@ footer{
         position: relative;
         transform: translate(5%);
         width: 100%;
-        
     }
    
     .links{
@@ -1131,7 +1142,6 @@ footer{
         right: 0;
         max-width: 490px;
         height: 100%;
-
         width: 100%;
         display: none;
         
@@ -1144,13 +1154,7 @@ footer{
         align-items: flex-start;
         width: 100%;
     }
-    .links ul a{
-   
-    }
-   
-    .logo{
-        
-    }
+    
     .wrapperaboutme .container{
         grid-template-columns: 1fr;
         
@@ -1168,15 +1172,4 @@ footer{
         
     }
 }
-@media (max-width: 720px){
-.wrapperaboutme {
-    height: 65vh;
-}
-@media (max-width: 570px){
-.wrapperaboutme {
-    height: 70vh;
-}
-  @media (max-width: 375px){
-.wrapperaboutme {
-    height: 142vh;
-}
+
