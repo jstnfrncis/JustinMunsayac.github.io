@@ -36,7 +36,7 @@ a{
 }
 
 .big-wrapper{
-    padding: 0rem 0 10rem;
+ 
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
@@ -221,7 +221,9 @@ a{
     max-width: 81rem;
     margin-inline: auto;
     padding: 0 3rem;
+    gap: 40px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 header {
     position: relative;
@@ -319,8 +321,11 @@ header .container{
 
 
 /* ================= Landing Page =================*/
-
+.showcase-area{
+    height: 100vh;
+}
 .landing-container{
+    transform: translateY(120px);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
@@ -358,8 +363,8 @@ header .container{
 .text{
     color: var(--clr-Gray-100);
     margin: 1rem 0 1.1rem;
-    max-width: 550px;
-    padding-left: ;
+ 
+
 }
 /* ======= This is connected to  WHO I AM TEXT ===== */
 
@@ -390,39 +395,88 @@ header .container{
 }
 
 
-/* =============== SECTION ABOUT ME ============ */
+/*  SECTION ABOUT ME ================================================================================================================================================================================= */
 
 
-.wrapperaboutme .container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-}
 
-section{
-    background-color: var(--clr-backgroundcolor-0);
-}
 .about{
+    background-color: var(--clr-backgroundcolor-0);
     text-align: center;
-    max-width: 100%;
-    padding-top: 50px;
-
+    padding-top: 55px;
+    display: flex;
+    flex-direction: column;
+    height: 65vh;
+    overflow: hidden;
 }
+.about h1{
+    height: 10px
+}
+.Front-Title{
+    font-size: ;
+}
+.about-datas{
+    z-index: 5;
+    gap: 10rem;
+    transform: translateY(10%);
+    display: grid;
+    max-width: 1220px;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+}
+.left-datas{
+    max-width: 460px;
+    margin: 0 auto;
+    text-align: justify;
+}
+.right-datas{
+   
+    gap: 10px;
+    
+}
+.svg-icons{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+}
+.graphic-Title{
+    border-bottom: 1px solid rgb(194, 194, 194);
+    text-align: start;
+    width: 315px;
+    height: 2.3rem;
+}
+.graphdesign-tools{
+    padding-top: 25px;
+    
+}
+.Front-Title{
+    width: 315px;
+    height: 2.3rem;
+    border-bottom: 1px solid rgb(194, 194, 194);
+    text-align: start;
+}
+.svgs{
+ display: flex;
+ flex-direction: row;
+ justify-content: start;
+ gap: 20px;
+ padding-top: 10px;
+ margin-left: -10px;
+}
+
 .about h1{
     font-size: 1rem;
     color: var(--clr-primary-300);
     height: 25px;
-    font-weight: bold;
-
-    
-    
+    font-weight: bold;  
 }
 .about h2{
     font-size: 1.5rem;
     color:var(--clr-Dark-Gray-100);
     font-weight: 600;
     line-height: 3rem;
-    
 }
 .about h3{
     font-size: .8rem;
@@ -432,35 +486,26 @@ section{
 
 }
 
-.wrapperaboutme{
-    padding: 0.5rem 0 10rem;
-    width: 100%;
-    min-height: 50vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
 
-}
 span{
     font-weight: 550;
     color:var(--clr-Gray-100);
 }
-.insidetext {
-    text-align: left;
-    padding-right: 30px;
-    color:var(--clr-Dark-Gray-100);
-    line-height: 1.6rem;
 
-}
 .text{
     color:var(--clr-Dark-Gray-100);
-    text-align: center;
+    text-align: start;
     font-weight: 700;
     justify-content: left;
 }
-.whoiam{
-    padding-top: 80px;
-    
+
+.textwhoiam{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    min-height: 264px;
+    max-width: 580px;
 }
 .skills{
     align-items: left;
@@ -473,74 +518,6 @@ span{
     text-align: center;   
 }
 
-.layoutforskills{
-    display: inline-block;
-   text-align: left;
-}
-.layoutforskills p{
-    color: var(--clr-Gray-100);
-}
-.ps{
-    border: 2px gray solid;
-    display: inline-block;
-    padding: .5rem 2rem;
-    border-radius: 50px;
-    color: var(--clr-Gray-100);
-    font-weight: 100px;
-    margin-right: 10px;
-    margin-bottom: 20px;
-    font-weight: 450;
-}
-.ai{
-    border: 2px gray solid;
-    display: inline-block;
-    padding: .5rem 2rem;
-    border-radius: 50px;
-    color: var(--clr-Gray-100);
-    font-weight: 100px;
-    margin-right: 10px;
-    margin-bottom: 20px;
-}
-.xd{
-    border: 2px gray solid;
-    display: inline-block;
-    padding: .5rem 2rem;
-    border-radius: 50px;
-    color: var(--clr-Gray-100);
-    font-weight: 100px;
-    margin-right: 10px;
-    margin-bottom: 20px;
-}
-.html{
-    border: 2px gray solid;
-    display: inline-block;
-    padding: .5rem 2rem;
-    border-radius: 50px;
-    color: var(--clr-Gray-100);
-    font-weight: 100px;
-    margin-right: 10px;
-    margin-bottom: 20px;
-}
-.css{
-    border: 2px gray solid;
-    display: inline-block;
-    padding: .5rem 2rem;
-    border-radius: 50px;
-    color: var(--clr-Gray-100);
-    font-weight: 100px;
-    margin-right: 10px;
-    margin-bottom: 20px;
-}
-.js{
-    border: 2px gray solid;
-    display: inline-block;
-    padding: .5rem 2rem;
-    border-radius: 50px;
-    color: var(--clr-Gray-100);
-    font-weight: 100px;
-    margin-right: 10px;
-    margin-bottom: 20px;
-}
 
 
 /* <!-- PERSONAL PROJECT TITLE  -------------> */
@@ -667,6 +644,17 @@ h1{
 }
 
 /* MEDIA QUARRY FOR LOGO SECTION MOBILE DEVICE */
+@media (max-width: 1220px){
+    .about{
+        height: 90vh;
+    }
+    .about-datas{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        
+    }
+}
 
 @media (max-width:1220px){
     .logocontainer{
@@ -1061,8 +1049,7 @@ footer{
     justify-content: center;
     align-items: center;
     margin: 25px;
-  
- 
+
 }
 .terms-title h1{
     text-transform: uppercase;
@@ -1075,7 +1062,7 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: start;
-    color: --;
+
    
 }
 .terms-inside h2{
@@ -1085,7 +1072,59 @@ footer{
     color: var(--clr-Gray-100);
 
 }
+
+
+/*  MEDIA QUARRY ========================================================================================================================================== */
+
 @media (max-width:1220px){
+ 
+  
+    .toggle-button{
+        display: flex;
+    }
+    .whoiam {
+        padding-top: 0;
+    }
+   
+    .showcase-area{
+        width: 100%;
+        height: 90vh;
+        padding: 50px;
+    }
+    .LANDINGPAGE{
+        align-items: center;
+        justify-content: center;
+        object-fit: cover;
+        position: relative;
+        transform: translate(5%);
+        width: 100%;
+        
+    }
+   
+    .links{
+        position: fixed;
+        top: 0;
+        right: 0;
+        max-width: 490px;
+        height: 100%;
+
+        width: 100%;
+        display: none;
+        
+       
+    }
+    .links ul {
+        margin: 0 auto;
+        max-width: 480px;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+ 
+
+
+    /*  TERMS ================================================================================================================== */
     .termcontainer{
         margin: 0px 0px;
     }
@@ -1100,75 +1139,76 @@ footer{
         padding: 25px 10px;
        font-size: .8rem;
     }
-    
 }
 
-/* =============== MEDIA QUARRY =============== */
-
-@media (max-width:1220px){
-    .toggle-button{
-        display: flex;
-    }
-    .showcase-area .landing-container{
+@media (max-width:765px){
+    .landing-container{
         grid-template-columns: 1fr;
-        width: 100%;
-        height: 100vh;
-        padding: 50px;
-    }
-    .LANDINGPAGE{
         align-items: center;
+        display: grid;
         justify-content: center;
-        object-fit: cover;
-        position: relative;
-        transform: translate(5%);
-        width: 100%;
+        text-align: center;
     }
-   
-    .links{
-        position: fixed;
-        top: 0;
-        right: 0;
-        max-width: 490px;
-        height: 100%;
-        width: 100%;
-        display: none;
-        
-       
+    .landing-container img{
+        width: 550px;
     }
-    .links ul {
-        margin: 0 auto;
-        max-width: 480px;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
+    .hellothere h2{
+        font-size: 2.2rem;
+        line-height: 1rem;
+    }
+    .text0{
+        font-size: .7rem;
+    }
+}
+
+@media (max-width:515px){
+    .about-datas{
+        padding: 0 40px;
+      transform: translateY(5px);
+    }
+    .works h1{
+        font-size: .9rem;
+    }
+    .works h2{
+        font-size: 1rem;
+    }
+    .works h3{
+        font-size: .7rem;
     }
     
-    .wrapperaboutme .container{
-        grid-template-columns: 1fr;
-        
+    .about h1{
+        font-size: .9rem;
     }
-    .wrapperaboutme{
-        height:50vh;
-        }
+    .about h2{
+        font-size: 1rem;
+    }
+    .left-datas{
+        font-size: .8rem;
+    }
+    .right-datas{
+        font-size: .8rem;
+    }
+}
+@media (max-width:281px){
 
-    .skills{
-        text-align: left;
-        margin-top: 40px;
+    .landing-container img{
+        width: 550px;
+        transform: translateY(-55px);
     }
-    .layoutforskills{
-        text-align: left;
-        
+    .right{
+        transform: translateY(-40px);
     }
-}
-@media (max-width: 720px){
-.wrapperaboutme {
-    height: 65vh;
-}
-@media (max-width: 570px){
-.wrapperaboutme {
-    height: 70vh;
-}
-  @media (max-width: 375px){
-.wrapperaboutme {
-    height: 142vh;
+    .hellothere h1{
+        font-size: 1rem;
+    }
+    .hellothere h2{
+        font-size: 1.2rem;
+        line-height: 1rem;
+    }
+    .text0{
+        font-size: .7rem;
+    }
+    .projectbtn{
+        font-size: .5rem;
+    }
 }
