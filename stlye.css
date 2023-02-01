@@ -1156,9 +1156,7 @@ footer{
         
     }
     .wrapperaboutme{
-        padding: 0.5rem 0 10rem;
-        width: 100%;
-        height:65vh;
+        height:50vh;
         }
 
     .skills{
@@ -1169,4 +1167,16 @@ footer{
         text-align: left;
         
     }
+}
+@media (max-width: 720px){
+.wrapperaboutme {
+    height: 65vh;
+}
+@media (max-width: 570px){
+.wrapperaboutme {
+    height: 70vh;
+}
+  @media (max-width: 375px){
+.wrapperaboutme {
+    height: 142vh;
 }
