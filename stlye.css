@@ -322,17 +322,23 @@ header .container{
 
 /* ================= Landing Page =================*/
 .showcase-area{
-    height: 100vh;
+    min-height: 100vh;
 }
 .landing-container{
-    transform: translateY(120px);
+    transform: translateY(150px);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
     align-items: center;
     object-fit: cover; 
+    
+}
+.left img{
+    pointer-events: none;
+    cursor: default;
 }
 .right{
+    
     transform: translate(5%, 35px); 
     align-items: center;
     justify-content: center;
@@ -344,7 +350,9 @@ header .container{
     width: 70%;
 }
 
-
+.hellothere{
+    user-select: none;
+}
 .hellothere h1{
     font-size: 1.5rem;
     color:var(--clr-Dark-Gray-100);
@@ -373,6 +381,7 @@ header .container{
     color: var(--clr-Gray-100);
     margin: 1rem 0 1.1rem;
     font-size: 1.2rem;
+    user-select: none;
 
 }
 
@@ -398,48 +407,39 @@ header .container{
 /*  SECTION ABOUT ME ================================================================================================================================================================================= */
 
 
-
 .about{
+    height: 70vh;
     background-color: var(--clr-backgroundcolor-0);
-    text-align: center;
-    padding-top: 55px;
+    padding: 0 35px;
     display: flex;
     flex-direction: column;
-    height: 65vh;
-    overflow: hidden;
-}
-.about h1{
-    height: 10px
-}
-.Front-Title{
-    font-size: ;
-}
-.about-datas{
-    z-index: 5;
-    gap: 10rem;
-    transform: translateY(10%);
-    display: grid;
-    max-width: 1220px;
+    padding-top: 25px;
     align-items: center;
+  }
+  
+  .about-datas{
+    user-select: none;
+    transform: translateY(30%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 90px;
+    max-width: 1000px;
     text-align: center;
-    margin: 0 auto;
-    grid-template-columns: 1fr 1fr;
-}
+    justify-content: center;
+    margin: 0  auto;
+  }
 .left-datas{
-    max-width: 460px;
-    margin: 0 auto;
+
     text-align: justify;
 }
 .right-datas{
-   
-    gap: 10px;
+  
     
 }
-.svg-icons{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    align-items: start;
+.svgs{
+    pointer-events: none;
+    cursor: default;
+
 }
 .graphic-Title{
     border-bottom: 1px solid rgb(194, 194, 194);
@@ -471,8 +471,10 @@ header .container{
     color: var(--clr-primary-300);
     height: 25px;
     font-weight: bold;  
+    user-select: none;
 }
 .about h2{
+    user-select: none;
     font-size: 1.5rem;
     color:var(--clr-Dark-Gray-100);
     font-weight: 600;
@@ -499,18 +501,6 @@ span{
     justify-content: left;
 }
 
-.textwhoiam{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
-    min-height: 264px;
-    max-width: 580px;
-}
-.skills{
-    align-items: left;
-}
-
 .text2{
     color:var(--clr-Dark-Gray-100);
     font-weight: 700;
@@ -531,7 +521,9 @@ span{
 .works{
     text-align: center;
     padding-top: 50px;
-
+    pointer-events: none;
+    cursor: default;
+    user-select: none;
 }
 .works h1{
     font-size: 1rem;
@@ -641,29 +633,10 @@ h1{
     margin: 40px auto;
     background-color: white;
     gap: 15px;
+    
+
 }
 
-/* MEDIA QUARRY FOR LOGO SECTION MOBILE DEVICE */
-@media (max-width: 1220px){
-    .about{
-        height: 90vh;
-    }
-    .about-datas{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-        
-    }
-}
-
-@media (max-width:1220px){
-    .logocontainer{
-        max-width: 100%;
-    padding: 0 50px 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    }
-}
 
 
 
@@ -682,6 +655,9 @@ h1{
 
 .logocontainer .logoimage:hover img{
     transform: scale(1.2);
+    pointer-events: none;
+    cursor: pointer;
+    user-select: none;
     
 }
 
@@ -720,6 +696,9 @@ h1{
 
 .bannercontainer .bannerimage:hover img{
     transform: scale(1.1);
+    pointer-events: none;
+    cursor: pointer;
+    user-select: none;
 }
 /*=============== OTHER DESIGN SECTION ==============*/
 
@@ -757,6 +736,9 @@ h1{
 
 .graphics-container .graphicimage:hover img{
     transform: scale(1.1);
+    pointer-events: none;
+    cursor: pointer;
+    user-select: none;
 }
 
 
@@ -765,7 +747,7 @@ h1{
     text-align: center;
     padding-top: 50px;
     height: 20vh;
-    
+    user-select: none;
 
 }
 @media (max-width:1220px){
@@ -1075,10 +1057,41 @@ footer{
 
 
 /*  MEDIA QUARRY ========================================================================================================================================== */
+@media (max-width: 1220px){
+    .about{
+         height: 80vh;
+       
+      }
+      .about-datas{
+        gap: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        transform: translateY(10%);
+        place-items: start;
+     
+      }
+      .svgs{
+        width: 65px;
+        height: 65px;
+    }
+    .logocontainer{
+    max-width: 100%;
+    padding: 0 50px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+}
 
+/* LANDING PAGE MEDIA ===================================================================================== */
 @media (max-width:1220px){
- 
-  
+    .landing-container {
+        grid-template-columns: 1fr;
+        align-items: center;
+        display: grid;
+        justify-content: center;
+        text-align: center;
+    }
+    
     .toggle-button{
         display: flex;
     }
@@ -1088,7 +1101,7 @@ footer{
    
     .showcase-area{
         width: 100%;
-        height: 90vh;
+        min-height: 100vh;
         padding: 50px;
     }
     .LANDINGPAGE{
@@ -1100,7 +1113,15 @@ footer{
         width: 100%;
         
     }
-   
+    .left img{
+        transform: translateY(-25%);
+        width: 500px;
+    }
+    .right {
+        transform: translateY(-20%);
+        align-items: center;
+        justify-content: center;
+    }
     .links{
         position: fixed;
         top: 0;
@@ -1124,7 +1145,7 @@ footer{
  
 
 
-    /*  TERMS ================================================================================================================== */
+    /*  TERMS MEDIA ================================================================================================================== */
     .termcontainer{
         margin: 0px 0px;
     }
@@ -1139,18 +1160,16 @@ footer{
         padding: 25px 10px;
        font-size: .8rem;
     }
+   
 }
-
-@media (max-width:765px){
-    .landing-container{
-        grid-template-columns: 1fr;
-        align-items: center;
-        display: grid;
-        justify-content: center;
-        text-align: center;
+@media (max-width:1025px){
+    .showcase-area{
+        min-height: 140vh;
     }
-    .landing-container img{
-        width: 550px;
+}
+@media (max-width:765px){
+    .showcase-area{
+    min-height: 70vh;
     }
     .hellothere h2{
         font-size: 2.2rem;
@@ -1159,13 +1178,18 @@ footer{
     .text0{
         font-size: .7rem;
     }
+    .projectbtn{
+        font-size: .8rem;
+    }
+    .viewmore{
+    text-decoration: none;
+    font-size: .6rem;
+    padding: 0.3rem 1rem;
+    }
 }
 
 @media (max-width:515px){
-    .about-datas{
-        padding: 0 40px;
-      transform: translateY(5px);
-    }
+
     .works h1{
         font-size: .9rem;
     }
@@ -1188,27 +1212,137 @@ footer{
     .right-datas{
         font-size: .8rem;
     }
-}
-@media (max-width:281px){
+ 
 
-    .landing-container img{
-        width: 550px;
-        transform: translateY(-55px);
+}
+@media (max-width: 541px){
+    .showcase-area{
+        height: 90vh;
     }
-    .right{
-        transform: translateY(-40px);
+    .footer-mid a {
+        font-size: 1rem;
+        line-height: 2rem;
+        margin: 0 20px;
+        transition: all 0.3s ease 0s;
+    }
+    .about{
+        min-height: 110vh;
+    }
+}
+@media (max-width: 415px){
+  
+    .footer-container {
+        background-color: var(--clr-primary-300);
+        display: flex;
+        gap: 10px;
+        padding: 5px 10px;
+    }
+    .footer-mid a {
+        font-size: .7rem;
+        line-height: 2rem;
+        margin: 0 20px;
+        transition: all 0.3s ease 0s;
+    }
+}
+@media (max-width:394px){
+    .about{
+        min-height: 90vh;
+    }
+}
+@media (max-width:376px){
+  
+    .showcase-area {
+        min-height: 100vh;
+      
+    }
+    .about {
+        height: 120vh;
+    }
+    .left-datas{
+        max-width: 305px;
+       
+    }
+    .right-datas{
+        font-size: .8rem;
+    }
+    .footer-mid a {
+        font-size: .7rem;
+        line-height: 2rem;
+        margin: 0 5px;
+       
+    }
+    .footer-container {
+        gap: 10px;
+        padding: 10px 30px;
+    }
+}
+@media (max-width:361px){
+    .left-datas{
+        max-width: 290px;
+       
+    }
+    .landing-container{
+        transform: translateY(80px);
+    }
+}
+@media (max-width:315px){
+    
+    .hellothere h1{
+        font-size: 1.2rem;
+    }
+    .hellothere h2{
+        font-size: 1.4rem;
+   
+    }
+    .text0{
+        font-size: .6rem;
+    }
+  
+}
+
+@media (max-width:281px){
+    .showcase-area{
+        height: 80vh;
+    }
+    .Front-Title {
+        width: 200px;
+        height: 1.5rem;
+    }
+    .graphic-Title {
+        width: 200px;
+        height: 1.5rem;
+    }
+    .left-datas{
+        max-width: 210px;
+       
+    }
+    .svgs{
+        width: 40px;
+
     }
     .hellothere h1{
         font-size: 1rem;
     }
     .hellothere h2{
-        font-size: 1.2rem;
-        line-height: 1rem;
+        font-size: 1.4rem;
     }
     .text0{
-        font-size: .7rem;
+        font-size: .6rem;
     }
     .projectbtn{
         font-size: .5rem;
+    }
+
+    .footer-container {
+        background-color: var(--clr-primary-300);
+        display: flex;
+        gap: 10px;
+        padding: 5px 10px;
+    }
+    .footer-mid a {
+        font-size: .7rem;
+        line-height: 2rem;
+        margin: 0 20px;
+        transition: all 0.3s ease 0s;
     }
 }
