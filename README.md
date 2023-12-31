@@ -1,3 +1,1 @@
-# justinmunsayac.github.io
-
-# Host link: https://jstnfrncis.github.io/justinmunsayac.github.io/
+Portfolio Link: https://jstnfrncis.github.io/justinmunsayac.github.io/
